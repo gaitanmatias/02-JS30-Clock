@@ -5,52 +5,52 @@
   box-sizing: border-box;
 }
 html {
-  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
-  background-size: cover;
   font-family: "helvetica neue";
-  text-align: center;
   font-size: 10px;
+  text-align: center;
+
+  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+  background-position: bottom left;
+  background-size: cover;
 }
 
 body {
-  margin: 0;
-  font-size: 2rem;
   display: flex;
-  flex: 1;
-  min-height: 100vh;
   align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  min-width: fit-content;
+  height: 100vh;
 }
 
 .clock-container {
-  margin: 50px auto;
-  padding: 30px;
-  width: 500px;
-  height: 500px;
-
   position: relative;
-  
-  border: 20px solid white;
+
+  width: 440px;
+  height: 440px;
+
+  border: 20px solid whitesmoke;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: -10px 20px 30px rgba(0,0,0,0.5),
-              inset 0px 20px 15px rgba(255,255,255, 0.1),
-              inset 0px -20px 15px rgba(0,0,0,0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+              inset -20px 10px 15px rgba(255,255,255, 0.1),
+              inset 20px -10px 15px rgba(0,0,0,0.15);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 
-.clock {
+.clock{
   width: 100%;
   height: 100%;
-  transform: translateY(-3px);
 }
 
 .hand {
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 10%;
   
-  width: 50%;
+  width: 40%;
   height: 6px;
   
   background: black;
@@ -61,14 +61,10 @@ body {
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 .clock--hours-hand{
-  left: 10%;
-  width: 40%;
+  left: 20%;
+  width: 30%;
+}
+.clock--seconds-hand{
+  border-radius: 50% 0% 0% 50%;
   background: red;
-  transform: rotate(0deg);
-}
-.clock--minutes-hand{background: blue;
-  transform: rotate(90deg);
-}
-.clock--seconds-hand{ background: yellow;
-  transform: rotate(270deg);
-}
+} 
